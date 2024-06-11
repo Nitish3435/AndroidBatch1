@@ -1,6 +1,3 @@
 My name is Nitish Kumar.
-<<<<<<< HEAD
 I am Adarsh.
-=======
 My name is Jangyaseni.
->>>>>>> 00864ff5a9111d7d98f822d08c8a80133bc387c1
