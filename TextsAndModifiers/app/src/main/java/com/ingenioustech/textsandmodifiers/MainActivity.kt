@@ -6,12 +6,20 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.ingenioustech.textsandmodifiers.ui.theme.TextsAndModifiersTheme
 
@@ -32,20 +40,46 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier,
-        fontSize = 45.sp
-    )
-}
 
 @Composable
 fun MyApp () {
-    Row {
-        Column {
-            Greeting(name = "Adarsh")
+    Column {
+
+        Row {
+            Column {
+                Text(
+                    text = "Hello Adarsh!",
+                    modifier = Modifier.padding(10.dp),
+                    fontSize = 25.sp,
+                    fontFamily = FontFamily.SansSerif,
+                    color = Color.DarkGray,
+                    fontWeight = FontWeight.ExtraBold
+                )
+            }
+            Column {
+                Text(
+                    text = "Hello ITW!",
+                    modifier = Modifier.padding(20.dp),
+                    fontSize = 25.sp,
+                    fontFamily = FontFamily.SansSerif,
+                    color = Color.DarkGray,
+                    fontWeight = FontWeight.ExtraBold,
+                    textDecoration = TextDecoration.LineThrough,
+                    overflow = TextOverflow.Clip
+                )
+            }
+        }
+        Row {
+            Column {
+                Text(
+                    text = "Hello Nitish!",
+                    modifier = Modifier,
+                    fontSize = 45.sp,
+                    fontFamily = FontFamily.SansSerif,
+                    color = Color.Cyan,
+                    fontWeight = FontWeight.Bold
+                )
+            }
         }
     }
 }
