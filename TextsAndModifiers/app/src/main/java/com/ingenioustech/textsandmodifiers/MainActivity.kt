@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -15,6 +16,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -43,43 +45,78 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MyApp () {
-    Column {
-
+    Column{
         Row {
             Column {
-                Text(
-                    text = "Hello Adarsh!",
-                    modifier = Modifier.padding(10.dp),
-                    fontSize = 25.sp,
-                    fontFamily = FontFamily.SansSerif,
-                    color = Color.DarkGray,
-                    fontWeight = FontWeight.ExtraBold
-                )
-            }
-            Column {
-                Text(
-                    text = "Hello ITW!",
-                    modifier = Modifier.padding(20.dp),
-                    fontSize = 25.sp,
-                    fontFamily = FontFamily.SansSerif,
-                    color = Color.DarkGray,
-                    fontWeight = FontWeight.ExtraBold,
-                    textDecoration = TextDecoration.LineThrough,
-                    overflow = TextOverflow.Clip
-                )
+
+                Row {
+                    Column {
+                        Text(
+                            text = "Hello Adarsh!",
+                            modifier = Modifier.padding(20.dp),
+                            fontSize = 25.sp,
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.DarkGray,
+                            fontWeight = FontWeight.ExtraBold
+                        )
+                    }
+                    Column {
+                        Text(
+                            text = "Hello ITW!",
+                            modifier = Modifier.padding(20.dp),
+                            fontSize = 25.sp,
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.DarkGray,
+                            fontWeight = FontWeight.ExtraBold,
+                            textDecoration = TextDecoration.LineThrough,
+                            overflow = TextOverflow.Clip
+                        )
+                    }
+                }
+                Row {
+                    Column {
+                        Text(
+                            text = "Hello Nitish!",
+                            modifier = Modifier.padding(20.dp),
+                            fontSize = 45.sp,
+                            fontFamily = FontFamily.SansSerif,
+                            color = Color.Cyan,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                }
+                Row {
+                    Text(
+                        text = "I am new to Android Development",
+                        modifier = Modifier
+                            .padding(20.dp),
+                        textAlign = TextAlign.Center
+                    )
+
+                }
             }
         }
         Row {
             Column {
-                Text(
-                    text = "Hello Nitish!",
-                    modifier = Modifier,
-                    fontSize = 45.sp,
-                    fontFamily = FontFamily.SansSerif,
-                    color = Color.Cyan,
-                    fontWeight = FontWeight.Bold
-                )
+                Row(modifier = Modifier.padding(20.dp)) {
+                    Column {
+                        Text(text = "A new row")
+                    }
+                    Column {
+                        Text(text= "And it's colummn")
+                    }
+                }
+            }
+            Column {
+                Text(text = "Not it's column")
             }
         }
     }
+}
+
+
+@Preview
+@Composable
+fun MyAppPreview() {
+    MyApp()
 }
