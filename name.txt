@@ -1,7 +1,0 @@
-My name is Nitish Kumar. I am a Software Engineer.
-My name is Jangyaseni.
-I am Adarsh.
-My name is Ankit, i am a cs student.
-I am in 3rd year.
-Branch change.
-Branch change 2.
