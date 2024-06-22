@@ -1,3 +1,6 @@
+//Make Sure you add dependencies in build.gradle file for Retrofit and Gson
+// Add Permission for Internet in Android Manifest file
+
 package com.example.andrioidbatch1
 
 import android.os.Bundle
