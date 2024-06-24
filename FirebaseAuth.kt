@@ -1,3 +1,7 @@
+// Add this browser dependency for Captch Validations
+// implementation("androidx.browser:browser:1.3.0")
+
+
 package com.example.siliconfirebase
 
 import android.content.ContentValues.TAG
