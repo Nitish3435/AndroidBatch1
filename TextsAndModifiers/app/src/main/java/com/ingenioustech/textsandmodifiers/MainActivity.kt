@@ -3,6 +3,8 @@ package com.ingenioustech.textsandmodifiers
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -44,13 +46,38 @@ class MainActivity : ComponentActivity() {
 
 
 @Composable
-fun MyApp () {
-    Column{
-        Row {
-            Column {
+fun MyApp() {
+    Column(modifier = Modifier
+        .border( // Defines the border properties
+            width = 10.dp, // Border thickness
+            color = Color.Black// Border color
+        )
+    ){
+        Row (modifier = Modifier
+            .border( // Defines the border properties
+                width = 2.dp, // Border thickness
+                color = Color.Black// Border color
+            )
+        ){
+            Column (modifier = Modifier
+                .border( // Defines the border properties
+                    width = 2.dp, // Border thickness
+                    color = Color.Black// Border color
+                )
+            ){
 
-                Row {
-                    Column {
+                Row (modifier = Modifier
+                    .border( // Defines the border properties
+                        width = 2.dp, // Border thickness
+                        color = Color.Black// Border color
+                    )
+                ){
+                    Column (modifier = Modifier
+                        .border( // Defines the border properties
+                            width = 2.dp, // Border thickness
+                            color = Color.Black// Border color
+                        )
+                    ){
                         Text(
                             text = "Hello Adarsh!",
                             modifier = Modifier.padding(20.dp),
@@ -60,7 +87,12 @@ fun MyApp () {
                             fontWeight = FontWeight.ExtraBold
                         )
                     }
-                    Column {
+                    Column (modifier = Modifier
+                        .border( // Defines the border properties
+                            width = 2.dp, // Border thickness
+                            color = Color.Black// Border color
+                        )
+                    ){
                         Text(
                             text = "Hello ITW!",
                             modifier = Modifier.padding(20.dp),
@@ -73,8 +105,18 @@ fun MyApp () {
                         )
                     }
                 }
-                Row {
-                    Column {
+                Row (modifier = Modifier
+                    .border( // Defines the border properties
+                        width = 2.dp, // Border thickness
+                        color = Color.Black// Border color
+                    )
+                ){
+                    Column (modifier = Modifier
+                        .border( // Defines the border properties
+                            width = 2.dp, // Border thickness
+                            color = Color.Black// Border color
+                        )
+                    ){
                         Text(
                             text = "Hello Nitish!",
                             modifier = Modifier.padding(20.dp),
@@ -85,7 +127,12 @@ fun MyApp () {
                         )
                     }
                 }
-                Row {
+                Row (modifier = Modifier
+                    .border( // Defines the border properties
+                        width = 2.dp, // Border thickness
+                        color = Color.Black// Border color
+                    )
+                ){
                     Text(
                         text = "I am new to Android Development",
                         modifier = Modifier
@@ -96,9 +143,25 @@ fun MyApp () {
                 }
             }
         }
-        Row {
-            Column {
-                Row(modifier = Modifier.padding(20.dp)) {
+        Row (modifier = Modifier
+            .border( // Defines the border properties
+                width = 2.dp, // Border thickness
+                color = Color.Black// Border color
+            )
+        ){
+            Column (modifier = Modifier
+                .border( // Defines the border properties
+                    width = 2.dp, // Border thickness
+                    color = Color.Black// Border color
+                )
+            ){
+                Row(modifier = Modifier
+                    .padding(20.dp)
+                    .border( // Defines the border properties
+                        width = 2.dp, // Border thickness
+                        color = Color.Black// Border color
+                    )
+                ){
                     Column {
                         Text(text = "A new row")
                     }
@@ -107,7 +170,12 @@ fun MyApp () {
                     }
                 }
             }
-            Column {
+            Column (modifier = Modifier
+                .border( // Defines the border properties
+                    width = 2.dp, // Border thickness
+                    color = Color.Black// Border color
+                )
+            ){
                 Text(text = "Not it's column")
             }
         }
